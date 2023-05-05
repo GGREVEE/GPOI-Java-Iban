@@ -1,25 +1,46 @@
 import java.math.BigInteger;
 
+
+/**
+ * Classe volta al controllo della validità di un codice IBAN
+ * @author Andrea Gulfo
+ * @version 1.2
+ */
 public class IBAN {
     
     private String iban;
-
+    /**
+     * Metodo costruttore volto alla creazione di nuove istanze
+     */
     public IBAN(){
 
     }
-
+    /**
+     * Metodo Costruttore che setta l'iban come oggetto della classe IBAN
+     * @param i codice iban
+     * */ 
     public IBAN(String i){
         setIban(i);
     }
-
+    /**
+     * Metodo volto al settare l'iban come oggetto della classe
+     * @param iban codice iban
+     */
     public void setIban(String iban) {
         this.iban = iban;
     }
-
+    /**
+     * Metodo volto al mandare in output il codice IBAN 
+     * @return ritornerà una stringa contenente il codice IBAN inserito in precedenza
+     */
     public String getIban() {
         return iban;
     }
-
+    /**
+    * Metodo volto al controllo della correttezza di un codice IBAN
+    * @return vero se il codice IBAN è corretto,falso se non lo è
+    * @throws NullPointerException l'iban risulta essere nullo o vuoto
+    */
     public boolean verificaIban(){
 
         // Verifica se l'iban è vuoto
